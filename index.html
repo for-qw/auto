@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Remember me !</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<h2>Please wait sownload willl start in <span id="count">5</span> seconds</h2>
+	<a href="a.jpg" download id="download">Click here if download is not start</a>
+
+
+	<script>
+		window.onload = function(){
+			var down = 4;
+			var inter = setInterval(timer, 1000)
+
+			function timer(){
+				var cowntdown = document.getElementById("count");
+				
+				cowntdown.innerHTML = down--;	
+				if (down == -1) {
+					clearInterval(inter)
+					document.getElementById("download").click();
+					// window.open("https://www.google.com");
+				}
+			}
+		}
+	</script>
+</body>
+</html>
